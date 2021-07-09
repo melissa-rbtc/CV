@@ -102,9 +102,53 @@ header .button:hover a {
   width: 47%;
   max-width: 640px;
   background: linear-gradient(105deg, #f05053ce, #f0b73c);
-  clip-path: polygon(0 10%, 100% 10%, 100% 90%, 76% 90%, 74% 100%, 66% 90%, 0 90%);
+  clip-path: polygon(4% 10%, 93% 10%, 93% 90%, 75% 90%, 80% 99%, 64% 89%, 4% 89%);
+
+
+
+
 }
 #langages .bar {
   padding: 10px 0 4px;
   letter-spacing: 0.1em;
+}
+/* ********************** FORMATION ********************************* */
+#formation {
+  position: relative;
+  top: -200px;
+  float: right;
+  margin: 5%;
+  padding: 110px 0 60px 50px;
+  width: 45%;
+  max-width: 660px;
+  background: linear-gradient(70deg, #a7ff78ee, #78ffd7de);
+  clip-path: polygon(8% 15%, 100% 15%, 100% 90%, 25% 90%, 15% 100%, 18% 90%, 8% 90%);
+}
+#autodidacte {
+  padding-top: 20px;
+}
+#ocr {
+  padding:  50px 0 0 9%;
+}
+#formation h4 {
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  padding-bottom: 10px;
+  color: #4ea173;
+  text-shadow: -1px -1px 1px #5ad893;
+}
+.counter {
+  display: flex;
+  text-align: center;
+}
+.data {
+  border: 1px solid #5ad893;
+  width: 170px;
+  margin: 0 4%;
+}
+.counter-value {
+  font-size: 2em;
+}
+.date-span {
+  font-size: 1.8em;
 }
