@@ -7,6 +7,8 @@ body {
   color: #283655 !important;
   background-color: #f7faff !important;
   font-family: 'Rambla', sans-serif;
+  background: linear-gradient(45deg, #aa839c4b, #fffcdca4);
+
 }
 h2, h3 {
   font-family: 'Audiowide', sans-serif;
@@ -33,8 +35,7 @@ li {
 header {
   text-align: center;
   height: 100vh;
-  background: url(./media/header.jpg) no-repeat fixed 50% 50%;
-  background-size: cover;
+ 
 }
 h1 {
   padding: 90px 0 10px 0;
@@ -135,7 +136,7 @@ header .button:hover a {
   letter-spacing: 0.08em;
   padding-bottom: 10px;
   color: #4ea173;
-  text-shadow: -1px -1px 1px #5ad893;
+  text-shadow: 2px 2px 2px rgba(170,206,85,0);
 }
 .counter {
   display: flex;
