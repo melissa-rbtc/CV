@@ -4,7 +4,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  color: #283655 !important;
+  color: #4D1A12 !important;
   background-color: #f7faff !important;
   font-family: 'Rambla', sans-serif;
   background: linear-gradient(45deg, #aa839c4b, #fffcdca4);
@@ -14,7 +14,7 @@ h2, h3 {
   font-family: 'Audiowide', sans-serif;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  text-shadow: -1px -1px 1px #283655;
+  text-shadow: -1px -1px 1px #4D1A12;
 }
 li {
   list-style-type: none;
@@ -53,6 +53,7 @@ h2 {
   padding: 20px 0 50px 0;
   font-size: 3em;
   text-transform: uppercase;
+  text-shadow: 10px 10px 10px  #D9B6CA;
 }
 .presentation {
   height: 240px;
@@ -103,7 +104,9 @@ header .button:hover a {
   width: 47%;
   max-width: 640px;
   background: linear-gradient(105deg, #f05053ce, #f0b73c);
-  clip-path: polygon(4% 10%, 93% 10%, 93% 90%, 75% 90%, 80% 99%, 64% 89%, 4% 89%);
+clip-path: polygon(0 10%, 93% 10%, 93% 90%, 75% 90%, 80% 99%, 64% 89%, 0 89%);
+
+
 
 
 
@@ -119,10 +122,10 @@ header .button:hover a {
   top: -200px;
   float: right;
   margin: 5%;
-  padding: 110px 0 60px 50px;
+  padding: 110px 0 60px 70px;
   width: 45%;
   max-width: 660px;
-  background: linear-gradient(70deg, #a7ff78ee, #78ffd7de);
+  background: linear-gradient(70deg, #1d2b64, #f8cdda);
   clip-path: polygon(8% 15%, 100% 15%, 100% 90%, 25% 90%, 15% 100%, 18% 90%, 8% 90%);
 }
 #autodidacte {
@@ -135,15 +138,15 @@ header .button:hover a {
   font-weight: bold;
   letter-spacing: 0.08em;
   padding-bottom: 10px;
-  color: #4ea173;
-  text-shadow: 2px 2px 2px rgba(170,206,85,0);
+  color: #D9B6CA;
+  text-shadow: 2px 2px 2px #d9b6ca88;
 }
 .counter {
   display: flex;
   text-align: center;
 }
 .data {
-  border: 1px solid #5ad893;
+  border: 1px solid #D9B6CA;
   width: 170px;
   margin: 0 4%;
 }
@@ -152,4 +155,65 @@ header .button:hover a {
 }
 .date-span {
   font-size: 1.8em;
+}
+/* ********************** PARCOURS ********************************* */
+#parcours {
+  max-width: 800px;
+  margin: 640px auto 180px auto;
+  padding: 40px 30px 100px 30px;
+  background: url(./media/fond-parcours.jpg) no-repeat fixed 50% 50%;
+  background-size: cover;
+  border-radius: 8px;
+  box-shadow: -1px -1px 8px #283655;
+}
+#parcours h3 {
+  font-size: 2.5em;
+  padding-bottom: 30px;
+}
+#parcours h4 {
+  font-size: 1.6em;
+  color: #ff4e50;
+  margin-left: 20px;
+  text-shadow: 1px 1px 1px  #1d2b64;
+}
+#parcours h6 {
+  font-style: italic;
+  color: #edca21;
+  margin-left: 20px;
+  text-shadow: 1px 1px 1px  #1d2b64;
+}
+#parcours p {
+  line-height: 1.9em;
+}
+.timeline {
+  border-top: 3px solid;
+  border-image: linear-gradient(to right, #f9d423, #ff4e50);
+  border-image-slice: 1;
+  margin: 0;
+  padding: 40px;
+  position: relative;
+}
+.timeline:nth-child(1):after {
+  content: '▲';
+  color: #ff4e50;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  box-sizing: content-box !important;
+}
+.timeline:nth-child(1) {
+  border-bottom: 3px solid;
+  border-top: none;
+  width: 80%;
+}
+.timeline:nth-child(2) {
+  border-top: none;
+}
+.timeline:nth-child(odd) {
+  border-right: 3px solid;
+  padding-left: 0;
+}
+.timeline:nth-child(even) {
+  border-left: 3px solid;
+  padding-right: 0;
 }
