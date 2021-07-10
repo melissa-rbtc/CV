@@ -10,10 +10,15 @@ body {
   background: url("./media/background.jpg") no-repeat 50% 50%;
   background-size: cover;
 }
-body .gradient {
+body:before {
+  content: "";
   background: #000000;
-  background: linear-gradient(168deg, #000000 10%, transparent 100%);
-  height: 100vh;
+  background: linear-gradient(168deg, #000000 0%, transparent 100%);
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  position: absolute;
+  z-index: 0;
 }
 
 li {
@@ -29,6 +34,8 @@ a:visited {
 
 .title {
   padding: 5px 0 0 10px;
+  z-index: 10;
+  position: relative;
 }
 .title h1 {
   font-family: "Megrim", cursive;
@@ -45,6 +52,7 @@ a:visited {
   position: absolute;
   top: 4px;
   right: 10px;
+  z-index: 100;
 }
 .nav li {
   display: inline;
@@ -77,10 +85,10 @@ a:visited {
 
 .carousel {
   width: 20%;
-  border-radius: 0px 0px 15px 15px;
+  border-radius: 0 0 15px 15px;
   margin: -20px auto 20px auto;
   overflow: hidden;
-  box-shadow: 8px 8px 4px -3px rgba(0, 0, 0, 0.7);
+  box-shadow: 8px 8px 4px -3px rgba 0, 0, 0, 0.7;
 }
 @media (max-width: 840px) {
   .carousel {
@@ -132,6 +140,8 @@ a:visited {
 }
 .offers {
   padding-top: 50px;
+  display: flex;
+  align-items: center;
 }
 
 .perspective {
@@ -224,10 +234,11 @@ footer {
   display: flex;
   justify-content: space-between;
   font-size: 1.3em;
-  font-family: "Megrim", crusive;
+  font-family: "Megrim", cursive;
 }
 .network a {
   padding: 0px 25px;
+  color: #F3F0F0;
 }
 @media (max-width: 840px) {
   .network a {
@@ -239,7 +250,7 @@ footer {
   transition: 0.4s ease-out;
   text-shadow: 0 0 5px #F3F0F0, 0 0 10px #F3F0F0, 0 0 15px #F3F0F0, 0 0 20px #fa9e1e, 0 0 30px #fa9e1e, 0 0 40px #fa9e1e, 0 0 55px #fa9e1e, 0 0 75px #fa9e1e;
 }
-.network a:hover:nth-child(5) {
+.network a:hover:ntch-child(5) {
   transform: scale(1.1);
   font-weight: bolder;
 }

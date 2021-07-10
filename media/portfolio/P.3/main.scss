@@ -16,10 +16,15 @@ body {
   background: url("./media/background.jpg") no-repeat 50% 50%;
   background-size: cover;
 
-  .gradient {
-  background: #000000;
-  background: linear-gradient(168deg,#000000 10%, transparent 100%);
-  height: 100vh;
+  &:before {
+    content:'';
+    background: #000000;
+    background: linear-gradient(168deg,#000000 0%, transparent 100%);
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    position: absolute;
+    z-index: 0;
   }
 }
 li {
@@ -34,6 +39,8 @@ a {
 // ******************** HEADER ***********************
 .title {
   padding: 5px 0 0 10px;
+  z-index: 10;
+  position: relative;
 
   h1 {
   font-family: 'Megrim', cursive;
@@ -50,6 +57,7 @@ a {
   position: absolute;
   top: 4px;
   right: 10px;
+  z-index: 100;
 
   li {
     display: inline;
@@ -78,16 +86,16 @@ a {
   top: 80px;
   left: 13%;
 }
-// ****************** CAROUSEL **********************
+// ******************** CAROUSEL ***********************
 .carousel {
   width: 20%;
-  border-radius: 0px 0px 15px 15px;
+  border-radius: 0 0 15px 15px;
   margin: -20px auto 20px auto;
   overflow: hidden;
-  box-shadow: 8px 8px 4px -3px rgba(0,0,0,0.7);
+  box-shadow: 8px 8px 4px -3px rgba (0,0,0,0.7);
 
   @media (max-width: 840px) {
-    display: none;
+    display:none;
   }
   &__figure {
     position: relative;
@@ -105,19 +113,21 @@ a {
   }
 }
 @keyframes sliders {
-  0% {left: 0%;}
-  20% {left: 0%;}
-  25% {left: -100%;}
-  45% {left: -100%;}
-  50% {left: -200%;}
-  70% {right: 200%;}
-  75% {right: 100%;}
-  95% {right: 100%;}
-  100% {right: 0%;}
+  0% {left: 0%}
+  20% {left: 0%}
+  25% {left: -100%}
+  45% {left: -100%}
+  50% {left: -200%}
+  70% {right: 200%}
+  75% {right: 100%}
+  95% {right: 100%}
+  100% {right: 0%}
 }
-// ********************** PRICING *********************
+// ******************** PRICING ***********************
 .offers {
   padding-top: 50px;
+  display: flex;
+  align-items: center;
 }
 .perspective {
   width: 100%;
@@ -167,26 +177,27 @@ a {
     right: -10px;
     font-size: 0.8em;
     font-weight: 600;
-    transform: translateZ(35px)
+    transform: translateZ(35px);
   }
 }
-// ******************** BUTTON *********************
-@mixin dash ($array, $offset, $width) {
+// ******************** BUTTON ***********************
+
+@mixin dash ($array, $offset, $widht) {
   stroke-dasharray: $array;
   stroke-dashoffset: $offset;
-  stroke-width: $width;
+  stroke-width: $widht;
 }
-
 .button {
   padding-top: 60px;
   position: relative;
   margin: 0 auto;
   width: 320px;
 
-  &:hover
+  &:hover 
     &__rect {
-      @include dash(760,0, 2px)
+      @include dash(760,0,2px)
     }
+  
 
   &__rect {
     fill: transparent;
@@ -207,7 +218,7 @@ a {
     top: -48px;
   }
 }
-// ********************* FOOTER ************************
+// ******************** BUTTON ***********************
 footer {
   position: absolute;
   bottom: 20px;
@@ -218,11 +229,13 @@ footer {
   display: flex;
   justify-content: space-between;
   font-size: 1.3em;
-  font-family: 'Megrim', crusive;
+  font-family: 'Megrim', cursive;
 
   a {
     padding: 0px 25px;
-  
+    color: $white;
+
+
     @media (max-width: 840px) {
       padding: 0px 5px;
     }
@@ -232,7 +245,7 @@ footer {
     transition: 0.4s ease-out;
     text-shadow: 0 0 5px $white, 0 0 10px $white, 0 0 15px $white, 0 0 20px $orange, 0 0 30px $orange, 0 0 40px $orange, 0 0 55px $orange, 0 0 75px $orange;
 
-    &:nth-child(5) {
+    &:ntch-child(5) {
       transform: scale(1.1);
       font-weight: bolder;
     }

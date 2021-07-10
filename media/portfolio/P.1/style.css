@@ -1,221 +1,956 @@
-@import url('https://fonts.googleapis.com/css?family=Advent+Pro|Dancing+Script&display=swap');
-
-html {
-  scroll-behavior: smooth;
+@font-face { /* Style de police normal*/
+    font-family: "Raleway";
+    src: url("Raleway/Raleway-Regular.ttf");    
+}
+@font-face {
+        font-family: "Ralewaybold";
+        src: url("Raleway/Raleway-Bold.ttf");        
+}
+@font-face {
+        font-family: "Ralewaymedium";
+        src: url("Raleway/Raleway-Medium.ttf");
 }
 
-body {
-  font-family: 'Advent Pro', sans-serif;
-  padding: 0;
-  margin: 0;
+body{
+    font-family: "Ralewaymedium", sans-serif, Georgia;
+    width: auto;
+    height: auto;
+    overflow-x: hidden;
+    margin: auto;      
 }
-ul {
-  margin: 0;
-  padding: 0;
+
+.contenant{
+        max-width: 1400px;
+        margin: auto;
 }
-li {
-  list-style-type: none;
+
+/*  ***     ***     *** Mise en place de la section Header***      ***     ***  */
+header{
+        display: flex;
+        justify-content: space-between;
+        margin-left: 20px;
+        margin-right: 20px;   
+   
 }
-h2 {
-  text-transform: uppercase;
-  text-align: center;
-  padding-top: 30px;
-  font-size: 2em;
+
+.logo{
+        height: auto;
+        width: 100px;
+        margin-right: auto;
+        padding-top: 20px;
+        align-self: flex-end;
+        flex: 80%;
 }
-a {
-  text-decoration: none;
-  color: black;
+
+.logoheader{
+        flex: 50%;
 }
-/* ******************* NAVBAR ******************* */
-nav {
-  overflow: hidden;
-  background-color: #FFFAE1;
-  position: fixed;
-  width: 100%;
-  opacity: 0.9;
+
+.choix{     
+        padding-top: 20px;       
 }
-header li {
-  float: right;
-  font-size: 1.2em;
+ 
+nav ul{
+        display: inline-flex;
+        list-style-type: none;
+       
+        
 }
-header li a {
-  text-decoration: none;
-  display: block;
-  text-align: center;
-  padding: 18px 16px;
+
+nav li{
+        width: 150px;
+        text-align: center;
+        
 }
-#logo {
-  font-family: 'Dancing Script', cursive;
-  font-weight: bold;
-  float: left;
+
+nav a{
+        text-decoration: none;
+        color: black;
+
+            
+
 }
-/* **************** IMAGE PRINCIPALE ************* */
-#imagePrincipale {
-  padding-top: 60px;
-  background: url(media/image-principale.JPG) no-repeat fixed 50% 50%;
-  background-size: cover;
-  height: 799px;
+
+nav a:hover{
+        color: #0065FC;
+        border-top: 2px solid #0065FC;
+        padding-top: 49px;
+        display: block;
+        margin-top: -50px;
+
 }
-h1 {
-  font-family: 'Dancing Script', cursive;
-  text-align: center;
-  color: antiquewhite;
-  font-size: 6em;
-  margin-top: 100px;
-  text-shadow: 1px 3px 2px black;
+
+
+.sinscrire{
+      padding-top: 49px;
+      color: #0065FC;
+      font-weight: bold;
+      margin-left: 5px;
+      border-top: 2px solid white;
+      text-decoration: none;
+
+
 }
-#premierTrait {
-  height: 1px;
-  width: 25%;
-  margin: -3px auto;
-  background-color: #FFFAE1;
-  box-shadow: 1px 3px 2px black;
+
+
+/*  ***     ***     *** Mise en page de la section recherche***     ***     ***  */
+
+.search{
+        margin-left: 20px;
+        margin-right: 20px;
 }
-h3 {
-  text-align: center;
-  color:antiquewhite;
-  font-size: 3em;
-  text-shadow: 1px 3px 2px black;
+
+h1{
+        
+        
+        font-size: 1.2em;
+        font-weight: bold;
 }
-/* *************** PRESENTATION ********************** */
-#presentation {
-  background-color: #FFFAE1;
-  padding: 10px 0px 100px 0;
+
+p{
+        font-size: 0.8em;
+        line-height: 20px;
+        
 }
-#texteIntro {
-  padding: 0px 20%;
+
+.logoloca{
+        background-color: #F2F2F2;
+        padding: 12px 12px 12px 12px;
+        border-bottom-left-radius: 10px;
+        border-top-left-radius: 10px;
+        border: solid #F2F2F2 1px;
+        margin-right: -5px;
 }
-#prestations {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 30px 10%;  
+
+.localiser{
+        padding: 10px 10px 10px 10px;
+        border: solid 1px #F2F2F2;
+    
 }
-.imagesPrestations h4 {
-  font-family: 'Dancing Script', cursive;
-  text-align: center;
-  font-size: 1.8em;
-  margin: 15px;
-  font-weight: 300;
+
+
+::placeholder{
+       
+       font-family: "Ralewaybold";
+       color: black;
+       font-size: 1.1em;
+       
 }
-.imagesPrestations img {
-  border-radius: 10px;
-  box-shadow: 5px 5px 3px 1px rgba(0,0,0,0.7);
+
+input{
+        font-size: 1em;
+        font-family: "Ralewaymedium";
 }
-.imagesPrestations img:hover {
-  opacity: 0.5;
-  transform: scale(1.05);
-  transition: 0.6s ease-in-out;
+
+.rechercher{
+        color: white;
+        background-color: #0065FC;
+        font-weight: bold;
+        padding: 12px 10px 10px 11px;
+        font-size: 0.9em;
+        border: none;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        margin: -5px;
+
 }
-/* **************** TOURISME ********************** */
-#tourisme {
-  height: 1400px;
-  background-color: #f1f2f6;
-  padding: 1px 2%;
+
+.recherloupe{
+        visibility: hidden;
 }
-#tourisme h2 {
-  padding-top: 60px;
+
+/*  ***     ***     *** Mise en place de la section filtres***      ***     ***   */
+
+.filtres{
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+
 }
-#ocean {
-  background: url(media/ocean.jpg);
+
+
+.filtresearch{
+    flex-wrap: wrap;
+    font-weight: bold;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    line-height: 56px; /* Hauteur de ligne*/
 }
-#chateau {
-  background: url(media/chateau.JPG);
+
+.filtresearch div:hover{
+        color: #0065FC;
 }
-#phare {
-  background: url(media/phare.JPG);
+
+.filtre{
+    padding: 10px;
+    border: solid 2px #F2F2F2;
+    border-radius: 23px;
+    padding-left: 49px;
+    position:relative;
+    right:44px;
 }
-#vignoble {
-  background: url(media/vignes.jpg);
+
+.rond_bleu{
+    background-color: #DEEBFF;
+    color: #0065FC;
+    padding: 12px;
+    border-radius: 50px;
+    width:20px;
+    text-align:center;
 }
-#tourisme li {
-  margin: 65px 100px 0 100px;
-  height: 226px;
-  width: 55%;
-  max-width: 550px;
-  float: left;
-  box-shadow: 6px 6px 28px -1px rgba(0,0,0,0.75);
+
+.infosup{
+        display: flex;
+        margin:0px;
+        margin-bottom: 1.2em;
+        
 }
-#tourisme p {
-  height: 45px;
-  width: 235px;
-  background-color: #01DF74;
-  float:right;
-  margin: 50px -180px 0 0;
-  font-size: 1.5em;
-  text-align: center;
-  padding-top: 15px;
-  box-shadow: 4px 4px 0 1px rgba(90,161,43,1);
+
+.cercle{
+        border: 1px solid #DEEBFF;
+        height: 1.5em;
+        width: 1.5em;
+        border-radius: 50%;
+        text-align: center;
+        vertical-align: top;
+        margin-right: 10px;
 }
-#tourisme #chateau, #tourisme #vignoble {
-  float: right;
+
+.Iinfo{
+        text-align: center;
+        vertical-align: middle;
+        font-size: 0.8em;
+        color: #0065FC;
+        
 }
-#chateau p, #vignoble p {
-  float: left;
-  background-color: cyan;
-  margin-left: -180px;
-  box-shadow: -4px 4px 0 1px rgba(15,154,156,1);
+
+.lgtdispo{
+        padding-top: 1px;
+        margin-top: 15px;
+        line-height: 20px;
 }
-/* ******************* FOOTER ******************** */
-footer {
-  background-color: #524A3A;
-  color: #FFFAE1;
-  padding: 20px 0 10px 0;
-  text-align: center;
+
+/*              **      **      ** Section principale**         **      **       */
+
+.principal{
+        display: flex;
+        justify-content: space-around;
+        height: 100%;
+        width: 100%;
+        margin-left: 20px;
+        
+        
 }
-form {
-  margin: 0 auto;
-  max-width: 900px;
+
+/*              **      **      **Hébergement**         **              **      */
+
+article{
+        display: flex;
+        justify-content: space-between;
+        background-color: #F2F2F2;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 60%;
+        border-radius: 20px;
+        padding: 20px;
+        margin-right: 40px;
+        
 }
-input, textarea, button {
-  border: none;
-  width: 55%;
-  padding: 15px 10px;
-  margin: 1px 0;
-  font-size: 1.2em;
-  font-family: 'Advent Pro', sans-serif;
-  border-radius: 8px;
+
+h2{
+        font-size: 1.2em;
+        font-weight: bold;
+        width: 95%;
 }
-textarea {
-  height: 120px;
+
+.hebergement{
+        width: 100%;
 }
-button {
-  font-size: 1.5em;
-  background-color: #FFFAE1;
+.casehotel{
+        height: auto;
+        width: 30%;
+        margin: 6px 6px 6px 6px;
+        padding: 3px 3px 3px 3px;
+        box-shadow: 3px 3px 8px 3px #DEEBFF;
+        background-color: white;
+        border-radius: 10px;
 }
-button:hover {
-  background-color: #e55039;
-  color: #FFFAE1;
-  cursor: pointer;
-  transition: 0.3s ease-in-out;
+
+.rectphoto{
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        border-radius: 10px 10px 0px 0px;
+        height: 10em;
+
 }
-#deuxiemeTrait {
-  height: 1px;
-  width: 75%;
-  background-color: #FFFAE1;
-  margin: 60px auto;
+
+.photochambre{
+        height: 100%;
+        width: 100%;
+        border-radius: 10px 10px 0px 0px;
+        margin: 0px;
+        object-fit: cover;
+        object-position: center;
+
 }
-#copyrightEtIcons {
-  display: flex;
-  margin-bottom: 20px;
-  padding: 0 10%;
+.nomH{
+        text-decoration: none;
+        color: black;
 }
-#copyright {
-  width: 50%;
-  text-align: left;
-  color: #FFFAE1;
+
+.nuità{
+        text-decoration: none;
+        color: black;
 }
-#icons {
-  width: 50%;
-  text-align: right;
+
+.nomhotel{
+        font-weight: bold;
+        margin-bottom: 8px;
+        margin-top: 12px;
+        padding-left: 15px;      
+        
 }
-#icons a {
-  display: inline-block;
-  padding: 0 15px;
-  font-size: 1.3em;
-  color: #FFFAE1;
+
+.prixetoile{
+        margin-top: 5px;
+        font-size: 0.9em;
+
 }
-#icons a:hover {
-  transform: scale(1.5);
-  transition: 0.1s;
+
+.noteetoileheb{
+        margin: 0px;
+        padding-left: 15px;
+        padding-bottom: 4px;        
+        
+}
+
+.noteetoileheb a{
+        text-decoration: none;
+}
+
+.tarif{
+        margin: 0px 0px 5px 0px;
+        padding-left: 15px;
+        
+}
+
+.prix{
+        font-weight: bold;
+}
+
+.etoilebleu{
+        font-size: small;
+        color: #0065FC;
+}
+
+.etoilegrise{
+        font-size: small;
+        color: #DEEBFF;
+}
+
+.afficherplus{
+        font-family: "Ralewaybold";
+        width: 95%;
+        height: 0px;
+}
+
+
+/*              **              **Plus Populaire**      **              **      */
+
+aside{
+        background-color: #F2F2F2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 20px;
+        width: calc(40% - 40px);
+        margin-right: 40px;
+        padding: 20px;
+        
+
+}
+
+.titrepopu{
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        width: 80%;    
+        padding-top: 9px;
+        padding-bottom:15px;    
+}
+
+
+
+
+.populaire{
+        width: 80%;                
+}
+
+.fleche{
+        color: black;
+        font-size: large;
+}
+
+aside .casehotel{
+        display: flex;
+        width: 80%;
+        border-radius: 20px;
+        box-shadow: 3px 3px 8px 3px #DEEBFF;
+        margin: 10px;
+        height: 9.9em;
+}
+
+aside .rectphoto{
+        width: 35%;
+        height: 96%;
+        margin: 0px 10px 0px 0px;
+        padding: 3px;
+        border-radius: 20px 0px 0px 20px;
+}
+
+aside .photochambre{
+        width: 100%;
+        height: 100%;
+        border-radius: 20px 0px 0px 20px;
+        object-fit: cover;
+        object-position: center;
+}
+
+.écrit{
+        
+        width: 180px;
+}
+
+aside .nomhotel{
+        margin: 0.5em 0em 0.3em 0.2em;
+        padding-top: 5px;
+        font-family: "Ralewaymedium";
+}
+
+aside .tarif{
+        margin: 0em 0em 0em 0.2em;
+
+}
+
+aside .etoilebleu .etoilegrise{
+        margin: 4em 0em 0em 0.2em;
+}
+
+.noteetoilepopu{       
+        position: relative;
+        left: 16px;
+        top: 45px;
+        
+}
+
+.noteetoilepopu1{
+        position: relative;
+        left: 16px;
+        top: 65px;
+
+}
+
+.noteetoilepopu a, .noteetoilepopu1 a{
+        text-decoration: none;
+}
+
+
+/*      **      **      **      **      **Partie Activités**    **      **      **      **      ***/
+
+.activity{
+        margin-left: 10px;
+        margin-right: 40px;
+        margin-bottom: 20px;
+}
+
+.activites{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 60px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin: auto;
+                
+}
+
+.activity h2{
+        font-size: 1.3em;
+        margin-top: 50px;
+        margin-left: 20px;
+}
+
+
+
+.entier{
+        height: 400px;
+        width: 23%;
+        padding: 0px;
+        border-radius: 20px;
+        box-shadow: 3px 3px 8px 3px #DEEBFF;
+        
+}
+
+.cadrelong{
+        height: 350px;
+        width: 100%;
+        margin: 0px;
+        border-radius: 20px 20px 0px 0px;
+}
+
+.vuelong{
+        width: 100%;
+        height: 350px;
+        border-radius: 20px 20px 0px 0px;
+        object-fit: cover;
+        object-position: center;
+}
+
+.demi{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 23%;
+        
+}
+
+.moyencadre{
+        height: 200px;
+        width: 100%;
+        border-radius: 20px;
+        box-shadow: 3px 3px 8px 3px #DEEBFF;
+}
+
+.fort{
+        height: 160px;
+        width: 100%;
+        margin: 0px;
+        border-radius: 20px 20px 0px 0px;
+}
+
+.grosimg{
+        height: 100%;
+        width: 100%;
+        border-radius: 20px 20px 0px 0px;
+        object-fit: cover;
+        object-position: center;
+}
+
+.petitcadre{
+        height: 150px;
+        width: 100%;
+        border-radius: 20px;
+        box-shadow: 3px 3px 8px 3px #DEEBFF;        
+}
+
+.frioul{
+        height: 100px;
+        width: 100%;
+        margin: 0px;
+        border-radius: 20px 20px 0px 0px;        
+}
+
+.petitimg{
+        height: 100%;
+        width: 100%;
+        border-radius: 20px 20px 0px 0px;
+        object-fit: cover;
+        object-position: center;        
+}
+
+.moitie{
+        height: 190px;
+        width: 100%;
+        border-radius: 20px;
+        box-shadow: 3px 3px 8px 3px #DEEBFF;        
+}
+
+.demicadre{
+        height: 140px;
+        width: 100%;
+        margin: 0px;
+        border-radius: 20px 20px 0px 0px;
+}
+
+.demiimg{
+        width: 100%;
+        height: 100%;
+        border-radius: 20px 20px 0px 0px;
+        object-fit: cover;
+        object-position: center;
+}
+
+.nomlieu{
+        margin: 0px;
+        font-family: "Ralewaybold";
+        padding: 1em 0em 1em 1em;
+        
+}
+
+.nomlieu a{
+        text-decoration: none;
+        color: black;
+}
+
+/*      **      **      **Partie FOOTER**       **      **      **      **      */
+
+footer{
+        background-color: #F2F2F2;
+        display: flex;
+        margin: auto;
+        width: 100%;
+}
+
+h5{
+        font-family: "Ralewaybold";
+        font-size: 0.9em;
+        margin-left: 40px;
+        
+}
+
+li{
+        margin: 15px 0px 15px 0px;
+        list-style-type: none;
+}
+
+.apropos, .nosheber, .assist{
+        width: 33.33%;
+        
+}
+
+
+
+
+/*      **      **      **Mise en place du responsive design avec media queries**       **      **       */
+
+@media screen and (max-width:1024px) 
+{
+    body{
+            width: 100%;
+            height: 100%;   
+            overflow-x: hidden;
+            margin-right: 0;
+            margin-left: 0;            
+            
+    }
+
+    header{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            margin-right: 0;
+            margin-left: 0;
+            
+    }
+
+.logo{
+        width: 80px;
+        margin-left: 8%;
+        padding-top: 20px;
+}
+
+.logoheader:nth-child(1){
+        width: 20%;
+        order: 1;
+        
+}
+
+.sinscrire:nth-child(3){
+        width: 20%;
+        text-align: center;
+        text-decoration: none;
+        margin-right: 4%;
+        order: 2;
+        padding-top: 20px;
+        margin-top: 4px;
+}
+
+
+/*      **      **      **Responsive Nav Choix**        **      **      */
+
+.choix:nth-child(2){
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        order: 3;
+        line-height: 40px;
+
+        
+}
+
+.choix:nth-child(2) ul{
+        padding: 0;
+        width:100%;
+        
+}
+
+.choix:nth-child(2) li{
+        margin: auto;
+        width:50%;
+        text-align: center;
+        border-bottom: 2px solid #F2F2F2;
+        
+}
+
+    .choix:nth-child(2) li:hover{
+            border: none;
+            color: #0065FC;
+            border-bottom: 2px solid #0065FC;
+            
+        }
+        
+        nav a:hover{
+                border-top: none;
+        }
+        
+/*           **      **      **      **Responsive partie search**    **      **      **      */
+        
+.search{
+                margin-right: 0;
+                margin-left: 0;
+}
+
+        H1{
+                font-size: 1.3em;
+        }
+        
+        p{
+                font-size: 1em;
+                margin-bottom: 25px;
+        }
+        
+        .searchecrit{
+                margin-left: 6%;
+                width: 80%;            
+                
+        }
+        
+        .logoloca{
+                padding: 12px 15px 12px 15px;
+        }
+
+        .formsearch{
+                
+            margin-left: 6%;
+            justify-content: center;
+            font-size: 1.1em;
+                                
+            
+    }
+
+    input{
+            font-size: 1em;
+            width: 180px;
+    }
+
+
+
+    .rechercher{
+            display: none;
+    }
+
+    
+    .recherloupe{
+        visibility: visible;
+        color: white;
+        background-color: #0065FC;
+        font-weight: bold;        
+        font-size: 0.8em;
+        border: none;
+        border-radius: 10px;
+        margin-left: -2px; 
+        padding: 12px 14px 12px 14px;
+    }
+
+
+
+/*        **      **      **      **Responsive pour la partie filtres**      **      **       */
+    
+        H4{
+                font-size: 1.2em;                               
+        
+        }
+
+    .filtres{
+            
+            flex-direction: column;
+            align-items: initial;
+            margin-left: 6%;
+            margin-right: 10%;
+    }
+
+    .filtresearch{
+            display: flex;                   
+            flex-direction: row;
+            flex-wrap: wrap;
+            font-size: 1.1em;
+            margin: 0px;
+           
+    }
+
+    .money, .famille{
+            margin-right: -40px;
+    }
+
+    .infosup{
+            margin-left: 6%;
+    }
+    
+/*      **      **      **      **Responsive sur la partie principal**         **      **      */
+        
+        .principal{
+                flex-direction: column-reverse;
+                padding: 0px;
+                width: auto;
+                height: 2300px;
+                margin-right: 0;
+                margin-left: 0;
+                
+        }
+
+        
+        aside{
+                width: auto;
+                height: auto;
+                background-color: #F2F2F2;
+                justify-content: center;
+                border-radius: 0;
+                margin: 0;
+        }
+
+        aside .titrepopu{
+                width: 100%;
+        }
+
+        aside .casehotel{
+                width: 100%;
+       
+        }
+        
+        .noteetoilepopu, .noteetoilepopu1{
+                position: relative;
+                left: 16px;
+                top: 35px;
+        } 
+        
+        article{
+            width: auto;
+            height: auto;
+            background-color: white;
+            justify-content: center;
+            margin-right: 0px;
+           
+        }
+
+        .casehotel{
+            width: 100%;
+            
+            
+        }
+
+        .hebergement{
+            width: 100%;
+            font-size: 1.3em;
+   
+        }
+
+        .titrepopu {
+                padding:0;
+        }
+        
+/*      **      **      **      **Responsive pour la partie activités**         **      **      **      */
+
+        .activity{      
+               
+                padding: 0px;
+                width: auto;
+                margin-right: 0;
+                margin-left: 0;
+                
+        }
+        .activites{
+                display: flex;
+                flex-direction: column;
+                width: auto;
+                
+                justify-content: flex-start;
+                align-items: center;
+                
+        
+                
+                                
+        }
+
+        .activity h2{
+                width: auto;
+                margin-left: 6%;
+                
+        }
+
+        .entier{
+                height: 200px;
+                width: 100%;
+                margin-bottom: 30px; 
+        }
+
+        .cadrelong{
+                width: 100%;
+                height: 150px;
+                
+        }
+
+        .vuelong, .grosimg, .petitimg, .demiimg{
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+        }
+
+        .nomlieu{
+                height: 10px;
+        }
+
+        .demi{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                width: 100%;
+                height: 400px;
+                align-items: center;
+                margin-bottom: 20px;               
+                
+        }
+
+        .fort, .frioul{
+                height: 150px;
+                
+        }
+
+        .moyencadre, .petitcadre, .moitie{
+                height: 200px;
+                margin-bottom: 20px;
+        }
+
+
+/**     **      **      **      **Mise en place du responsive FOOTER**  **      **      **      **/
+
+        footer{
+                display: flex;
+                flex-direction: column;
+                width: auto;
+                margin-top: 25px;
+                margin-right: 0px;
+                margin-left: 0px;
+                overflow-x: hidden;
+        }
+        
+        .apropos, .nosheber, .assist{
+                width: 100%;
+        }
+
+       
+
+    
 }

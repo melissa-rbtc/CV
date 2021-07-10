@@ -3927,7 +3927,7 @@ tbody.collapse.show {
 }
 
 .navbar {
-
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

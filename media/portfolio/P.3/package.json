@@ -1,11 +1,12 @@
 {
-  "name": "projet-3-sass",
+  "name": "projet2sass",
   "version": "1.0.0",
   "description": "",
-  "main": "script.js",
+  "main": "index.js",
   "scripts": {
     "sass":"sass --watch ./main.scss:./style.css"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC"
 }

@@ -1,15 +1,15 @@
 $(document).ready(function(){
 
-  $('.navbar').hide();
+    $(".navbar").hide();
 
-  $(function () {
-    $(window).scroll(function () {
+    $(function (){
+        $(window).scroll(function(){
 
-      if ($(this).scrollTop() > 140) {
-        $('.navbar').fadeIn();
-      } else {
-        $('.navbar').fadeOut();
-      }
+            if ($(this).scrollTop() > 140) {
+            $('.navbar').fadeIn();
+             } else {
+            $('.navbar').fadeOut();
+            }
+        });
     });
-  });
 });
