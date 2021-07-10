@@ -224,10 +224,10 @@ clip-path: polygon(0 10%, 93% 10%, 93% 90%, 75% 90%, 80% 99%, 64% 89%, 0 89%);
 }
 /* ********************** PORTFOLIO ********************************* */
 #portfolio {
-  margin 100px 2% à 2%;
+  margin: 100px 2% 0 2%;
   padding: 40px 10px 60px 40px;
   background-color: rgba(179,172,167,0.08);
-  box-shadow: 0px 0px 1px #a8a8a9;
+  box-shadow: 5px 5px 5px #a8a8a9;
 }
 #portfolio h3 {
   font-size: 3em;
